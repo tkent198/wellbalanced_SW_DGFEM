@@ -15,6 +15,5 @@ File name                   |  Summary
 :--------------------------:|:--------------------------:
 ```...```          |  ...
 
----
-![live_panel](MATLAB/mov/wetro2_Nk_100_Tend_1000.gif)
----
+
+![free surface height](figs/fig1_res=200_tmax=10_Fr=1_9.jpg)
