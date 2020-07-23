@@ -2,7 +2,8 @@
 
 ![free surface height](figs/fig1_res=200_tmax=10_Fr=1_9.jpg)
 
-This repository contains the source code for investigating the well-balanced property of shallow water flows integrated using the discontinuous Galerkin finite element method (DGFEM) of Rhebergen et al. (2008). The results of this investigation, first mentioned in Kent (2017) and Kent et al. (2017), is reported in detail in Kent and Bokhove (2020); the abstract is reproduced below, with the main points highlighted, and the source code instructions follow.
+This repository contains the source code for investigating the well-balanced property of shallow water flows integrated using the discontinuous Galerkin finite element method (DGFEM) of Rhebergen et al. (2008). The main aims of this investigation are (i) to highlight an unsatisfactory issue of the DGFEM scheme developed by Rhebergen et al. (2008), which concerns well-balancedness and arises when integrating the shallow water equations with varying topography at lowest order; and (ii) to give a comprehensive proof of the numerical artefact that causes it.
+Knowledge of this issue – overlooked in Rhebergen et al. (2008) and hitherto unreported in detail – first arose in Kent et al. (2017), who commented on the problem but did not provide proof of the result. It has since been reported in detail in Kent and Bokhove (2020) using the source code published here (an early version also appeared in Kent (2017)); the abstract is reproduced below, with the main points highlighted, and the source code instructions follow.
 
 ### References
 * Rhebergen, S., Bokhove, O., van der Vegt, J. J. (2008): Discontinuous Galerkin finite element methods for hyperbolic nonconservative partial differential equations. *J. Comp. Phys.*, 227(3), 1887-1922.
