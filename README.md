@@ -32,6 +32,19 @@ File name                   |  Summary
 ```init_cond_DGFEM_fun.m``` |  Function: initial condition projection
 ```plot_DGFEM_SW.m```       |  Plotting routine: plots data saved from ```run_DGFEM_SW.m```
 
+#### Basic use
+* Run ```run_DGFEM_SW.m``` with ```DG = 0```. Some figure windows will open to check progress. At the end of the simulation, the data are saved in the dir ```/data```. Repeat for ```DG = 1```.
+* Run plotting routine ```plot_DGFEM_SW.m``` to produce two summary plots which are saved in the dir ```/figs```: (i) snapshots of the free-surface height h+b and topography b at various times for both DG0 and DG1; (ii) close-up profiles of the free-surface height h+b and momentum hu.
+* *Optional:* repeat for different Froude number ```Fr``` or resolution ```Nk = 50, 100, 200```.
+
 #### Summary of output
 
+![free surface height](figs/fig1_res=200_tmax=10_Fr=1_9.jpg)
+Figure (i): Snapshots of the free-surface height h+b and topography b at times at t = 0, 2.5, 5, 7.5, 10 in DG0 (piecewise constant; left) and DG1
+(piecewise linear; right) simulations initialised with rest flow conditions (h+b=1 and hu=0). DG1 simulations, with piecewise linear
+topography continuous across elements, maintain flow at rest for all t>0 and are therefore considered well-balanced. On the other hand, evolving
+topography (and therefore fluid depth h) emerges as t>0 in DG0 simulations. Despite h+b=1 for all t at DG0, the evolving b and h means that
+the scheme should not be considered truly well-balanced. Other simulation details: Nk = 200, Fr = 1.9 (supercritical), t = [0, 10].
+
 ![h+b and hu at tmax](figs/fig2_res=200_tmax=10_Fr=1_9.jpg)
+Figure (ii): Close up snapshots at t=tmax=10 of hu (top) and h+b (bottom) for DG0 (left) and DG1 (right). Zero momentum is conserved at both DG0 and DG1 but the free surface height starts drifting at DG0 due to the diffusive h and b fields at DG0 (see fig. (i)).
